@@ -1,0 +1,31 @@
+.navbar-nav {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 7px;
+}
+.navbar-nav a{
+    position: relative;
+}
+.navbar-nav a::after{
+    position: absolute;
+    content: " ";
+    background-color: blue;
+    height: 3px;
+    width: 89%;
+    left: 50%;
+    bottom: 0%;
+    transition: .6s ease-in-out;
+    transform: translateX(-50%) scaleX(0);
+}
+.navbar-nav a:hover::after{
+    transform: translateX(-50%) scaleX(1);
+}
+
+.navbar-nav a:hover {
+    background-color: #d4bcbc;
+    transition: .7s ease-in-out;
+    border-radius: 8px;
+}
+.navbar-light .navbar-nav .active>.nav-link:hover{
+    color: red;
+}
